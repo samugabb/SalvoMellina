@@ -1,0 +1,97 @@
+/* ----------------------------- ELEMENTI ----------------------------- */
+body {
+  background: url(../images/bkg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Montserrat;
+  color: white;
+}
+
+/* ----------------------------- CLASSI ----------------------------- */
+
+/* ----------------------------- HEADER ----------------------------- */
+.top-container {
+  padding: 5rem 14rem;
+}
+
+.smlogo {
+  width: 15vw;
+}
+
+.nav-item {
+  padding: 0 2rem;
+}
+
+.nav-link {
+  color: rgba(255,255,255);
+  font-weight: 500;
+  font-size: 0.9rem;
+
+  display: inline-block;
+  padding: 15px 20px 0 20px;
+  position: relative;
+}
+/* UNDERLINE HOVER */
+.nav-link:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.nav-link:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+/* ----------------------------- FOOTER ----------------------------- */
+.footer-center {
+  position:absolute;
+  width:300px;
+  margin-left:-150px;
+  bottom:2rem;
+  left:50%;
+}
+
+.footer {
+  font-size: 0.8rem;
+  padding-left: 1rem;
+  position: fixed;
+  bottom: 0;
+}
+
+/* ----------------------------- INDEX ----------------------------- */
+
+.hometitle {
+  padding-top: 30vh;
+  text-align: center;
+  font-weight: 900;
+  font-size: 5rem;
+}
+
+.social {
+  text-align: center;
+}
+
+.socialicon {
+  padding: 1rem 1rem 0;
+  color: white;
+}
+
+.socialicon:hover {
+  color: grey;
+  text-decoration: none;
+}
+/* ----------------------------- SERVICES ----------------------------- */
+
+/* ----------------------------- WHO IS SALVO ----------------------------- */
+
+/* ----------------------------- CONTACTS ----------------------------- */
+
+/* ----------------------------- MEDIA BREAKPOINT ----------------------------- */
