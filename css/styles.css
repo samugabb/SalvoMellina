@@ -7,6 +7,19 @@ body {
   color: white;
 }
 
+h1 {
+  font-weight: 900;
+  margin-bottom: 0;
+}
+
+h3 {
+  font-weight: 200;
+  font-size: 1.2rem;
+}
+
+p {
+  margin: 0;
+}
 /* ***************************** CLASSI ***************************** */
 
 /* ----------------------------- HEADER ----------------------------- */
@@ -34,10 +47,10 @@ body {
 /* UNDERLINE HOVER */
 .nav-link:after {
   background: none repeat scroll 0 0 transparent;
-  bottom: 0;
+  bottom: -5px;
   content: "";
   display: block;
-  height: 2px;
+  height: 5px;
   left: 50%;
   position: absolute;
   background: #fff;
@@ -53,28 +66,18 @@ body {
 .bottom-container {
   position: fixed;
   bottom: 0;
-
 }
 
 .footer-center {
   margin: 0;
   text-align: center;
   padding-bottom: 2vh;
-  /* position:absolute;
-  width:300px;
-  margin-left:-150px;
-  bottom:2rem;
-  left:50%; */
 }
 
 .footer {
   margin: 0;
   font-size: 0.8rem;
   padding-bottom: 1vh;
-  /*padding-left: 1rem;
-  position: fixed;
-  bottom: 0;
-  margin: 3px; */
 }
 
 /* ----------------------------- INDEX ----------------------------- */
@@ -99,11 +102,98 @@ body {
   color: grey;
   text-decoration: none;
 }
+/* ----------------------------- WHO IS SALVO ----------------------------- */
+.profiletag {
+  padding: 1rem 0 2rem 0;
+  font-size: 0.7rem;
+  margin-right: 1rem;
+}
+
+.tag {
+  background-color: rgba(62,62,62);
+  margin: 0 0.6rem;
+  padding: 0 0.5rem;
+  width: 30%;
+}
+
+.btn-light {
+  border-radius: 0;
+  font-weight: 900;
+  margin-right: 2rem;
+}
+
+.profilephoto {
+  text-align: right;
+  padding: 6rem 0 0 0;
+  padding-right: 3rem;
+}
+
+.profileinfo {
+  border-left-style: solid;
+  padding: 0;
+  padding-left: 3rem;
+}
+
+.studiesimg {
+  width: 4%;
+  float: left;
+  padding-top: 1%;
+}
+
+.studies {
+  font-size: 0.7rem;
+}
+
 /* ----------------------------- PORTFOLIO ----------------------------- */
 
-/* ----------------------------- WHO IS SALVO ----------------------------- */
-
 /* ----------------------------- CONTACTS ----------------------------- */
+.contactform {
+  border-radius: 2%;
+  background-color: rgba(220,220,220,0.1);
+  padding: 2rem;
+  text-align: center;
+}
+
+.contacttitle {
+  font-weight: 500;
+  font-size: 3rem;
+}
+
+.form-control {
+  background-color: rgba(0,0,0,0);
+  color: white;
+  border-style: none;
+  border-bottom-style: solid;
+  border-radius: 0;
+  margin-bottom: 2rem;
+
+}
+
+/* cambio colore placholder */
+.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: rgba(220,220,220,0.5);
+}
+
+.form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: rgba(220,220,220,0.5);
+}
+
+.form-control::-ms-input-placeholder { /* Microsoft Edge */
+            color: rgba(220,220,220,0.5);
+ }
+
+.form-control:focus {
+  background-color: rgba(0,0,0,0);
+  box-shadow: none;
+  border-color: white;
+  color: white;
+}
+
+.contactformsubmit {
+  margin-top: 3rem;
+  font-weight: 900;
+  width: 30%;
+}
 
 /* ***************************** MEDIA BREAKPOINT ***************************** */
 /* ----------------------------- FOOTER ----------------------------- */
