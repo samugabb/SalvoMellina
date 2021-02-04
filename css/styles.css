@@ -1,18 +1,17 @@
-/* ----------------------------- ELEMENTI ----------------------------- */
+/* ***************************** ELEMENTI ***************************** */
 body {
   background: url(../images/bkg.png);
-  background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+
   font-family: Montserrat;
   color: white;
 }
 
-/* ----------------------------- CLASSI ----------------------------- */
+/* ***************************** CLASSI ***************************** */
 
 /* ----------------------------- HEADER ----------------------------- */
 .top-container {
-  padding: 5rem 14rem;
+  padding: 5rem 10%;
 }
 
 .smlogo {
@@ -51,25 +50,37 @@ body {
 }
 
 /* ----------------------------- FOOTER ----------------------------- */
+.bottom-container {
+  position: fixed;
+  bottom: 0;
+
+}
+
 .footer-center {
-  position:absolute;
+  margin: 0;
+  text-align: center;
+  padding-bottom: 2vh;
+  /* position:absolute;
   width:300px;
   margin-left:-150px;
   bottom:2rem;
-  left:50%;
+  left:50%; */
 }
 
 .footer {
+  margin: 0;
   font-size: 0.8rem;
-  padding-left: 1rem;
+  padding-bottom: 1vh;
+  /*padding-left: 1rem;
   position: fixed;
   bottom: 0;
+  margin: 3px; */
 }
 
 /* ----------------------------- INDEX ----------------------------- */
 
 .hometitle {
-  padding-top: 30vh;
+  padding-top: 25vh;
   text-align: center;
   font-weight: 900;
   font-size: 5rem;
@@ -88,10 +99,36 @@ body {
   color: grey;
   text-decoration: none;
 }
-/* ----------------------------- SERVICES ----------------------------- */
+/* ----------------------------- PORTFOLIO ----------------------------- */
 
 /* ----------------------------- WHO IS SALVO ----------------------------- */
 
 /* ----------------------------- CONTACTS ----------------------------- */
 
-/* ----------------------------- MEDIA BREAKPOINT ----------------------------- */
+/* ***************************** MEDIA BREAKPOINT ***************************** */
+/* ----------------------------- FOOTER ----------------------------- */
+@media only screen and (max-width: 800px) {
+  .top-container {
+    padding: 0;
+  }
+
+  .navbar {
+    padding: 3%;
+  }
+
+  .smlogo {
+    width: 80%;
+  }
+
+  .bottom-container {
+    background-color: grey;
+  }
+
+  .footer-center {
+    padding: 0;
+  }
+
+  .footer {
+    padding: 0;
+  }
+}
