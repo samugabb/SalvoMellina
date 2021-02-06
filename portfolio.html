@@ -35,10 +35,10 @@
 
     <!-- tuttecose -->
     <div class="row">
-      <div class="col-2">
+      <div class="col-md-2 col-sm-0">
 
       </div>
-      <div class="col-8">
+      <div class="col-md-8 col-sm-12">
         <div id="carousel" class="carousel slide carousel-fade" data-interval="false">
           <ol class="carousel-indicators">
             <li data-target="#carousel" data-slide-to="0" class="active">ADVERTISEMENTS</li>
@@ -123,7 +123,6 @@
       video3 = document.querySelector( '.card-video3' ),
       video4 = document.querySelector( '.card-video4' );
 
-
     // Shine effect
     card1.onmousemove = function (e) {
     const x = e.pageX - card1.offsetLeft;
@@ -159,11 +158,9 @@
 
     // Youtube API
     function onYouTubePlayerAPIReady() {
-      player1 = new YT.Player('video1', {
-        events: {
-          'onReady': onPlayerReady1
-        }
-      });
+      player1 = new YT.Player('video1');
+
+
       player2 = new YT.Player('video2', {
         events: {
           'onReady': onPlayerReady2
@@ -182,7 +179,7 @@
     }
 
     // Player Ready
-    function onPlayerReady1(event) {
+
       play1.addEventListener( 'click', function() {
         card1.classList.add( 'video-is-open' );
         setTimeout(function() {
@@ -190,7 +187,6 @@
           player1.playVideo();
         }, 500);
       });
-    }
 
     function onPlayerReady2(event) {
       play2.addEventListener( 'click', function() {
@@ -221,7 +217,6 @@
         }, 500);
       });
     }
-
 
     // Inject YouTube API script
     var tag = document.createElement('script');
