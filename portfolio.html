@@ -106,93 +106,138 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
     <script type="text/javascript">
-      // Variables
-      var player1, player2, player3, player4,
-      		card1  = document.querySelector( '.card1' ),
-          card2  = document.querySelector( '.card2' ),
-          card3  = document.querySelector( '.card3' ),
-          card4  = document.querySelector( '.card4' ),
+    // Variables
+    var player1, player2, player3, player4,
+      card1  = document.querySelector( '.card1' ),
+      card2  = document.querySelector( '.card2' ),
+      card3  = document.querySelector( '.card3' ),
+      card4  = document.querySelector( '.card4' ),
 
-      		play1  = document.querySelector( '.card-play1' ),
-          play2  = document.querySelector( '.card-play2' ),
-          play3  = document.querySelector( '.card-play3' ),
-          play4  = document.querySelector( '.card-play4' ),
+      play1  = document.querySelector( '.card-play1' ),
+      play2  = document.querySelector( '.card-play2' ),
+      play3  = document.querySelector( '.card-play3' ),
+      play4  = document.querySelector( '.card-play4' ),
 
-      		video1 = document.querySelector( '.card-video1' );
-          video2 = document.querySelector( '.card-video2' );
-          video3 = document.querySelector( '.card-video3' );
-          video4 = document.querySelector( '.card-video4' );
+      video1 = document.querySelector( '.card-video1' ),
+      video2 = document.querySelector( '.card-video2' ),
+      video3 = document.querySelector( '.card-video3' ),
+      video4 = document.querySelector( '.card-video4' );
 
-      // Shine effect
-      card1.onmousemove = function (e) {
-      	const x = e.pageX - card.offsetLeft;
-      	const y = e.pageY - card.offsetTop;
 
-      	card1.style.setProperty( '--x', x + 'px' );
-      	card1.style.setProperty( '--y', y + 'px' );
+    // Shine effect
+    card1.onmousemove = function (e) {
+    const x = e.pageX - card1.offsetLeft;
+    const y = e.pageY - card1.offsetTop;
+
+    card1.style.setProperty( '--x', x + 'px' );
+    card1.style.setProperty( '--y', y + 'px' );
+    }
+
+    card2.onmousemove = function (e) {
+    const x = e.pageX - card2.offsetLeft;
+    const y = e.pageY - card2.offsetTop;
+
+    card2.style.setProperty( '--x', x + 'px' );
+    card2.style.setProperty( '--y', y + 'px' );
+    }
+
+    card3.onmousemove = function (e) {
+    const x = e.pageX - card3.offsetLeft;
+    const y = e.pageY - card3.offsetTop;
+
+    card3.style.setProperty( '--x', x + 'px' );
+    card3.style.setProperty( '--y', y + 'px' );
+    }
+
+    card4.onmousemove = function (e) {
+    const x = e.pageX - card4.offsetLeft;
+    const y = e.pageY - card4.offsetTop;
+
+    card4.style.setProperty( '--x', x + 'px' );
+    card4.style.setProperty( '--y', y + 'px' );
+    }
+
+    // Youtube API
+    function onYouTubePlayerAPIReady1() {
+    player1 = new YT.Player('video1', {
+      events: {
+        'onReady': onPlayerReady1
       }
+    });
+    }
 
-      // Youtube API
-      function onYouTubePlayerAPIReady() {
-        player1 = new YT.Player('video1', {
-          events: {
-            'onReady': onPlayerReady
-          }
-        });
-        player2 = new YT.Player('video2', {
-          events: {
-            'onReady': onPlayerReady
-          }
-        });
-        player3 = new YT.Player('video3', {
-          events: {
-            'onReady': onPlayerReady
-          }
-        });
-        player4 = new YT.Player('video4', {
-          events: {
-            'onReady': onPlayerReady
-          }
-        });
+    function onYouTubePlayerAPIReady2() {
+    player2 = new YT.Player('video2', {
+      events: {
+        'onReady': onPlayerReady2
       }
+    });
+    }
 
-      // Player Ready
-      function onPlayerReady(event) {
-      	play1.addEventListener( 'click', function() {
-      		card1.classList.add( 'video-is-open' );
-      		setTimeout(function() {
-      			video1.style.display = 'block';
-      			player1.playVideo();
-      		}, 500);
-      	});
-        play2.addEventListener( 'click', function() {
-          card2.classList.add( 'video-is-open' );
-          setTimeout(function() {
-            video2.style.display = 'block';
-            player2.playVideo();
-          }, 500);
-        });
-        play3.addEventListener( 'click', function() {
-          card3.classList.add( 'video-is-open' );
-          setTimeout(function() {
-            video3.style.display = 'block';
-            player3.playVideo();
-          }, 500);
-        });
-        play4.addEventListener( 'click', function() {
-          card4.classList.add( 'video-is-open' );
-          setTimeout(function() {
-            video4.style.display = 'block';
-            player4.playVideo();
-          }, 500);
-        });
+    function onYouTubePlayerAPIReady3() {
+    player3 = new YT.Player('video3', {
+      events: {
+        'onReady': onPlayerReady3
       }
+    });
+    }
 
-      // Inject YouTube API script
-      var tag = document.createElement('script');
-      tag.src = "//www.youtube.com/player_api";
-      var firstScriptTag = document.getElementsByTagName('script')[0];
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    function onYouTubePlayerAPIReady4() {
+    player4 = new YT.Player('video4', {
+      events: {
+        'onReady': onPlayerReady4
+      }
+    });
+    }
+
+
+    // Player Ready
+    function onPlayerReady1(event) {
+    play1.addEventListener( 'click', function() {
+      card1.classList.add( 'video-is-open' );
+      setTimeout(function() {
+        video1.style.display = 'block';
+        player1.playVideo();
+      }, 500);
+    });
+    }
+
+    function onPlayerReady2(event) {
+    play2.addEventListener( 'click', function() {
+      card2.classList.add( 'video-is-open' );
+      setTimeout(function() {
+        video2.style.display = 'block';
+        player2.playVideo();
+      }, 500);
+    });
+    }
+
+    function onPlayerReady3(event) {
+    play3.addEventListener( 'click', function() {
+      card3.classList.add( 'video-is-open' );
+      setTimeout(function() {
+        video3.style.display = 'block';
+        player3.playVideo();
+      }, 500);
+    });
+    }
+
+    function onPlayerReady4(event) {
+    play4.addEventListener( 'click', function() {
+      card4.classList.add( 'video-is-open' );
+      setTimeout(function() {
+        video4.style.display = 'block';
+        player4.playVideo();
+      }, 500);
+    });
+    }
+
+
+    // Inject YouTube API script
+    var tag = document.createElement('script');
+    tag.src = "//www.youtube.com/player_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
     </script>
 
   </body>
