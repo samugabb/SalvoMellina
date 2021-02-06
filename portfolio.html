@@ -159,24 +159,10 @@
     // Youtube API
     function onYouTubePlayerAPIReady() {
       player1 = new YT.Player('video1', {
-        width: 1280,
-        height: 720
-      });
-
-
-      player2 = new YT.Player('video2', {
         events: {
-          'onReady': onPlayerReady2
-        }
-      });
-      player3 = new YT.Player('video3', {
-        events: {
-          'onReady': onPlayerReady3
-        }
-      });
-      player4 = new YT.Player('video4', {
-        events: {
-          'onReady': onPlayerReady4
+          'onReady': function () {
+              console.log('I am ready');
+          }
         }
       });
     }
