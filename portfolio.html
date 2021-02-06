@@ -50,8 +50,8 @@
           <div class="carousel-inner">
             <div class="carousel-item active">
               <div class="card card1">
-                <div class="card-play"></div>
-                <div class="card-video">
+                <div class="card-play card-play1"></div>
+                <div class="card-video card-video1">
                   <iframe id="video" src="https://www.youtube.com/embed/JE9z-gy4De4?enablejsapi=1&amp;html5=1&amp;iv_load_policy=3&amp;rel=0&amp;showinfo=0" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
                 </div>
               </div>
@@ -59,8 +59,8 @@
 
             <div class="carousel-item">
               <div class="card card2">
-                <div class="card-play"></div>
-                <div class="card-video">
+                <div class="card-play card-play2"></div>
+                <div class="card-video card-video2">
                   <iframe id="video" src="https://www.youtube.com/embed/JE9z-gy4De4?enablejsapi=1&amp;html5=1&amp;iv_load_policy=3&amp;rel=0&amp;showinfo=0" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
                 </div>
               </div>
@@ -68,8 +68,8 @@
 
             <div class="carousel-item">
               <div class="card card3">
-                <div class="card-play"></div>
-                <div class="card-video">
+                <div class="card-play card-play3"></div>
+                <div class="card-video card-video3">
                   <iframe id="video" src="https://www.youtube.com/embed/JE9z-gy4De4?enablejsapi=1&amp;html5=1&amp;iv_load_policy=3&amp;rel=0&amp;showinfo=0" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
                 </div>
               </div>
@@ -77,8 +77,8 @@
 
             <div class="carousel-item">
               <div class="card card4">
-                <div class="card-play"></div>
-                <div class="card-video">
+                <div class="card-play card-play4"></div>
+                <div class="card-video card-video4">
                   <iframe id="video" src="https://www.youtube.com/embed/JE9z-gy4De4?enablejsapi=1&amp;html5=1&amp;iv_load_policy=3&amp;rel=0&amp;showinfo=0" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
                 </div>
               </div>
@@ -108,10 +108,21 @@
 
     <script type="text/javascript">
       // Variables
-      var player,
-      		card  = document.querySelector( '.card' ),
-      		play  = document.querySelector( '.card-play' ),
-      		video = document.querySelector( '.card-video' );
+      var player1, player2, player3, player4,
+      		card1  = document.querySelector( '.card1' ),
+          card2  = document.querySelector( '.card2' ),
+          card3  = document.querySelector( '.card3' ),
+          card4  = document.querySelector( '.card4' ),
+
+      		play1  = document.querySelector( '.card-play1' ),
+          play2  = document.querySelector( '.card-play2' ),
+          play3  = document.querySelector( '.card-play3' ),
+          play4  = document.querySelector( '.card-play4' ),
+
+      		video1 = document.querySelector( '.card-video1' );
+          video2 = document.querySelector( '.card-video2' );
+          video3 = document.querySelector( '.card-video3' );
+          video4 = document.querySelector( '.card-video4' );
 
       // Shine effect
       /*card.onmousemove = function (e) {
@@ -124,22 +135,67 @@
 
       // Youtube API
       function onYouTubePlayerAPIReady() {
-        player = new YT.Player('video', {
+        player1 = new YT.Player('video1', {
           events: {
-            'onReady': onPlayerReady
+            'onReady': onPlayerReady1
+          }
+        });
+        player2 = new YT.Player('video2', {
+          events: {
+            'onReady': onPlayerReady2
+          }
+        });
+        player3 = new YT.Player('video3', {
+          events: {
+            'onReady': onPlayerReady3
+          }
+        });
+        player4 = new YT.Player('video4', {
+          events: {
+            'onReady': onPlayerReady4
           }
         });
       }
 
       // Player Ready
-      function onPlayerReady(event) {
-      	play.addEventListener( 'click', function() {
-      		card.classList.add( 'video-is-open' );
+      function onPlayerReady1(event) {
+      	play1.addEventListener( 'click', function() {
+      		card1.classList.add( 'video-is-open' );
       		setTimeout(function() {
-      			video.style.display = 'block';
-      			player.playVideo();
+      			video1.style.display = 'block';
+      			player1.playVideo();
       		}, 500);
       	});
+      }
+
+      function onPlayerReady2(event) {
+        play2.addEventListener( 'click', function() {
+          card2.classList.add( 'video-is-open' );
+          setTimeout(function() {
+            video2.style.display = 'block';
+            player2.playVideo();
+          }, 500);
+        });
+      }
+
+      function onPlayerReady3(event) {
+        play3.addEventListener( 'click', function() {
+          card3.classList.add( 'video-is-open' );
+          setTimeout(function() {
+            video3.style.display = 'block';
+            player3.playVideo();
+          }, 500);
+        });
+      }
+
+      function onPlayerReady(event) {
+        play3.addEventListener( 'click', function() {
+          card3.classList.add( 'video-is-open' );
+          setTimeout(function() {
+            video3.style.display = 'block';
+            player3.playVideo();
+          }, 500);
+        });
       }
 
       // Inject YouTube API script
