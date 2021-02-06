@@ -158,78 +158,68 @@
     }
 
     // Youtube API
-    function onYouTubePlayerAPIReady1() {
-    player1 = new YT.Player('video1', {
-      events: {
-        'onReady': onPlayerReady1
-      }
-    });
+    function onYouTubePlayerAPIReady() {
+      player1 = new YT.Player('video1', {
+        events: {
+          'onReady': onPlayerReady1
+        }
+      });
+      player2 = new YT.Player('video2', {
+        events: {
+          'onReady': onPlayerReady2
+        }
+      });
+      player3 = new YT.Player('video3', {
+        events: {
+          'onReady': onPlayerReady3
+        }
+      });
+      player4 = new YT.Player('video4', {
+        events: {
+          'onReady': onPlayerReady4
+        }
+      });
     }
-
-    function onYouTubePlayerAPIReady2() {
-    player2 = new YT.Player('video2', {
-      events: {
-        'onReady': onPlayerReady2
-      }
-    });
-    }
-
-    function onYouTubePlayerAPIReady3() {
-    player3 = new YT.Player('video3', {
-      events: {
-        'onReady': onPlayerReady3
-      }
-    });
-    }
-
-    function onYouTubePlayerAPIReady4() {
-    player4 = new YT.Player('video4', {
-      events: {
-        'onReady': onPlayerReady4
-      }
-    });
-    }
-
 
     // Player Ready
     function onPlayerReady1(event) {
-    play1.addEventListener( 'click', function() {
-      card1.classList.add( 'video-is-open' );
-      setTimeout(function() {
-        video1.style.display = 'block';
-        player1.playVideo();
-      }, 500);
-    });
+      play1.addEventListener( 'click', function() {
+        card1.classList.add( 'video-is-open' );
+        setTimeout(function() {
+          video1.style.display = 'block';
+          player1.playVideo();
+        }, 500);
+      });
     }
 
     function onPlayerReady2(event) {
-    play2.addEventListener( 'click', function() {
-      card2.classList.add( 'video-is-open' );
-      setTimeout(function() {
-        video2.style.display = 'block';
-        player2.playVideo();
-      }, 500);
-    });
+      play2.addEventListener( 'click', function() {
+        card2.classList.add( 'video-is-open' );
+        setTimeout(function() {
+          video2.style.display = 'block';
+          player2.playVideo();
+        }, 500);
+      });
     }
 
     function onPlayerReady3(event) {
-    play3.addEventListener( 'click', function() {
-      card3.classList.add( 'video-is-open' );
-      setTimeout(function() {
-        video3.style.display = 'block';
-        player3.playVideo();
-      }, 500);
-    });
+      play3.addEventListener( 'click', function() {
+        card3.classList.add( 'video-is-open' );
+        setTimeout(function() {
+          video3.style.display = 'block';
+          player3.playVideo();
+        }, 500);
+      });
     }
 
     function onPlayerReady4(event) {
-    play4.addEventListener( 'click', function() {
-      card4.classList.add( 'video-is-open' );
-      setTimeout(function() {
-        video4.style.display = 'block';
-        player4.playVideo();
-      }, 500);
-    });
+      play4.addEventListener( 'click', function() {
+        card4.classList.add( 'video-is-open' );
+        setTimeout(function() {
+          video4.style.display = 'block';
+          player4.playVideo();
+        }, 500);
+      });
     }
 
 
