@@ -15,7 +15,7 @@
   <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-dark navbar-expand-lg top-container services">
+    <nav class="navbar navbar-dark navbar-expand-lg top-container">
       <a href="index.html"><img class="smlogo" src="images/Logo-bianco.png" alt=""></a>
 
       <div class="navbar-collapse" id="navbarSupportedContent">
@@ -49,7 +49,7 @@
 <!-- https://www.youtube.com/embed/Rcgk2u2_vu8?enablejsapi=1&amp;html5=1&amp;iv_load_policy=3&amp;rel=0&amp;showinfo=0 -->
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <div class="card">
+              <div class="card card1">
                 <div class="card-play"></div>
                 <div class="card-video">
                   <iframe id="video" src="https://www.youtube.com/embed/JE9z-gy4De4?enablejsapi=1&amp;html5=1&amp;iv_load_policy=3&amp;rel=0&amp;showinfo=0" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
@@ -58,28 +58,33 @@
             </div>
 
             <div class="carousel-item">
-              <iframe class="video" src="https://www.youtube.com/embed/Rcgk2u2_vu8?enablejsapi=1&amp;html5=1&amp;iv_load_policy=3&amp;rel=0&amp;showinfo=0" width="" height=""></iframe>
+              <div class="card card2">
+                <div class="card-play"></div>
+                <div class="card-video">
+                  <iframe id="video" src="https://www.youtube.com/embed/JE9z-gy4De4?enablejsapi=1&amp;html5=1&amp;iv_load_policy=3&amp;rel=0&amp;showinfo=0" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+                </div>
+              </div>
             </div>
 
             <div class="carousel-item">
-              <iframe class="video" src="https://www.youtube.com/embed/Rcgk2u2_vu8?enablejsapi=1&amp;html5=1&amp;iv_load_policy=3&amp;rel=0&amp;showinfo=0" width="" height=""></iframe>
+              <div class="card card3">
+                <div class="card-play"></div>
+                <div class="card-video">
+                  <iframe id="video" src="https://www.youtube.com/embed/JE9z-gy4De4?enablejsapi=1&amp;html5=1&amp;iv_load_policy=3&amp;rel=0&amp;showinfo=0" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+                </div>
+              </div>
             </div>
 
             <div class="carousel-item">
-              <iframe class="video" src="https://www.youtube.com/embed/Rcgk2u2_vu8?enablejsapi=1&amp;html5=1&amp;iv_load_policy=3&amp;rel=0&amp;showinfo=0" width="" height=""></iframe>
+              <div class="card card4">
+                <div class="card-play"></div>
+                <div class="card-video">
+                  <iframe id="video" src="https://www.youtube.com/embed/JE9z-gy4De4?enablejsapi=1&amp;html5=1&amp;iv_load_policy=3&amp;rel=0&amp;showinfo=0" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+                </div>
+              </div>
             </div>
 
           </div>
-          <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-
-          <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-
         </div>
       </div>
     </div>
@@ -108,16 +113,14 @@
       		play  = document.querySelector( '.card-play' ),
       		video = document.querySelector( '.card-video' );
 
-
       // Shine effect
-      card.onmousemove = function (e) {
+      /*card.onmousemove = function (e) {
       	const x = e.pageX - card.offsetLeft;
       	const y = e.pageY - card.offsetTop;
 
       	card.style.setProperty( '--x', x + 'px' );
       	card.style.setProperty( '--y', y + 'px' );
-      }
-
+      }*/
 
       // Youtube API
       function onYouTubePlayerAPIReady() {
@@ -127,7 +130,6 @@
           }
         });
       }
-
 
       // Player Ready
       function onPlayerReady(event) {
@@ -139,7 +141,6 @@
       		}, 500);
       	});
       }
-
 
       // Inject YouTube API script
       var tag = document.createElement('script');

@@ -19,11 +19,18 @@ h3 {
 p {
   margin: 0;
 }
-/* ***************************** CLASSI ***************************** */
 
+strong {
+  color: white;
+}
+/* ***************************** CLASSI ***************************** */
+.row {
+  margin: 0;
+  padding: 0;
+}
 /* ----------------------------- HEADER ----------------------------- */
 .top-container {
-  padding: 5rem 10%;
+  padding: 5rem 10% 3rem;
 }
 
 .smlogo {
@@ -43,6 +50,7 @@ p {
   padding: 15px 20px 0 20px;
   position: relative;
 }
+
 /* UNDERLINE HOVER */
 .nav-link:after {
   background: none repeat scroll 0 0 transparent;
@@ -60,7 +68,6 @@ p {
   width: 100%;
   left: 0;
 }
-
 /* ----------------------------- FOOTER ----------------------------- */
 .bottom-container {
   position: fixed;
@@ -145,17 +152,13 @@ p {
 }
 
 /* ----------------------------- PORTFOLIO ----------------------------- */
-.card-video {
-
-}
-
 .carousel-indicators li {
   box-sizing: inherit;
   text-indent: unset;
   width: auto;
   position: relative;
   top: 2rem;
-  padding: 0 2rem;
+  padding: 0 1vw;
 }
 
 .video {
@@ -164,15 +167,10 @@ p {
   height: 55vh;
   border-style: none;
 }
-
-.row {
-  margin: 0;
-  padding: 0;
-}
-
 /* ------------ PLAYER ------------ */
 /* ------------ CARD ------------ */
 .card {
+  margin-left: 4%;
   width: 70vw;
   height: calc(9/16 * 70vw);
   max-width: calc(16/9 * 70vh);
@@ -181,8 +179,23 @@ p {
   position: relative;
   border-radius: 6px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1613479/inception.jpg") center center/cover;
   overflow: hidden;
+}
+
+.card1 {
+  background: url(../images/Card1.jpg) center center/cover;
+}
+
+.card2 {
+  background: url(../images/Card2.jpg) center center/cover;
+}
+
+.card3 {
+  background: url(../images/Card3.jpg) center center/cover;
+}
+
+.card4 {
+  background: url(../images/Card4.jpg) center center/cover;
 }
 
 .card-play {
