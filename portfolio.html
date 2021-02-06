@@ -157,7 +157,7 @@
     }
 
     // Youtube API
-    window.onYouTubeIframeAPIReady = function() {
+    function onYouTubePlayerAPIReady() {
       player1 = new YT.Player('video1', {
         events: {
           'onReady': function () {
@@ -165,10 +165,11 @@
           }
         }
       });
+      onPlayerReady1();
     }
 
     // Player Ready
-
+    function onPlayerReady1(event) {
       play1.addEventListener( 'click', function() {
         card1.classList.add( 'video-is-open' );
         setTimeout(function() {
@@ -176,6 +177,7 @@
           player1.playVideo();
         }, 500);
       });
+    }
 
     function onPlayerReady2(event) {
       play2.addEventListener( 'click', function() {
