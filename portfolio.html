@@ -157,7 +157,7 @@
     }
 
     // Youtube API
-    function onYouTubePlayerAPIReady() {
+    window.onYouTubeIframeAPIReady = function() {
       player1 = new YT.Player('video1', {
         events: {
           'onReady': function () {
