@@ -51,7 +51,7 @@
               <div class="card card1">
                 <div class="card-play card-play1"></div>
                 <div class="card-video card-video1">
-                  <iframe id="video" src="https://www.youtube.com/embed/JE9z-gy4De4?enablejsapi=1&amp;html5=1&amp;iv_load_policy=3&amp;rel=0&amp;showinfo=0" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+                  <iframe id="video1" src="https://www.youtube.com/embed/JE9z-gy4De4?enablejsapi=1&amp;html5=1&amp;iv_load_policy=3&amp;rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
                 </div>
               </div>
             </div>
@@ -60,7 +60,7 @@
               <div class="card card2">
                 <div class="card-play card-play2"></div>
                 <div class="card-video card-video2">
-                  <iframe id="video" src="https://www.youtube.com/embed/JE9z-gy4De4?enablejsapi=1&amp;html5=1&amp;iv_load_policy=3&amp;rel=0&amp;showinfo=0" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+                  <iframe id="video2" src="https://www.youtube.com/embed/JE9z-gy4De4?enablejsapi=1&amp;html5=1&amp;iv_load_policy=3&amp;rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
                 </div>
               </div>
             </div>
@@ -69,7 +69,7 @@
               <div class="card card3">
                 <div class="card-play card-play3"></div>
                 <div class="card-video card-video3">
-                  <iframe id="video" src="https://www.youtube.com/embed/JE9z-gy4De4?enablejsapi=1&amp;html5=1&amp;iv_load_policy=3&amp;rel=0&amp;showinfo=0" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+                  <iframe id="video3" src="https://www.youtube.com/embed/JE9z-gy4De4?enablejsapi=1&amp;html5=1&amp;iv_load_policy=3&amp;rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
                 </div>
               </div>
             </div>
@@ -78,7 +78,7 @@
               <div class="card card4">
                 <div class="card-play card-play4"></div>
                 <div class="card-video card-video4">
-                  <iframe id="video" src="https://www.youtube.com/embed/JE9z-gy4De4?enablejsapi=1&amp;html5=1&amp;iv_load_policy=3&amp;rel=0&amp;showinfo=0" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+                  <iframe id="video4" src="https://www.youtube.com/embed/JE9z-gy4De4?enablejsapi=1&amp;html5=1&amp;iv_load_policy=3&amp;rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
                 </div>
               </div>
             </div>
@@ -125,54 +125,81 @@
 
     // Shine effect
     card1.onmousemove = function (e) {
-    const x = e.pageX - card1.offsetLeft;
-    const y = e.pageY - card1.offsetTop;
+      const x = e.pageX - card1.offsetLeft;
+      const y = e.pageY - card1.offsetTop;
 
-    card1.style.setProperty( '--x', x + 'px' );
-    card1.style.setProperty( '--y', y + 'px' );
+      card1.style.setProperty( '--x', x + 'px' );
+      card1.style.setProperty( '--y', y + 'px' );
     }
 
     card2.onmousemove = function (e) {
-    const x = e.pageX - card2.offsetLeft;
-    const y = e.pageY - card2.offsetTop;
+      const x = e.pageX - card2.offsetLeft;
+      const y = e.pageY - card2.offsetTop;
 
-    card2.style.setProperty( '--x', x + 'px' );
-    card2.style.setProperty( '--y', y + 'px' );
+      card2.style.setProperty( '--x', x + 'px' );
+      card2.style.setProperty( '--y', y + 'px' );
     }
 
     card3.onmousemove = function (e) {
-    const x = e.pageX - card3.offsetLeft;
-    const y = e.pageY - card3.offsetTop;
+      const x = e.pageX - card3.offsetLeft;
+      const y = e.pageY - card3.offsetTop;
 
-    card3.style.setProperty( '--x', x + 'px' );
-    card3.style.setProperty( '--y', y + 'px' );
+      card3.style.setProperty( '--x', x + 'px' );
+      card3.style.setProperty( '--y', y + 'px' );
     }
 
     card4.onmousemove = function (e) {
-    const x = e.pageX - card4.offsetLeft;
-    const y = e.pageY - card4.offsetTop;
+      const x = e.pageX - card4.offsetLeft;
+      const y = e.pageY - card4.offsetTop;
 
-    card4.style.setProperty( '--x', x + 'px' );
-    card4.style.setProperty( '--y', y + 'px' );
+      card4.style.setProperty( '--x', x + 'px' );
+      card4.style.setProperty( '--y', y + 'px' );
     }
 
     // Youtube API
     function onYouTubePlayerAPIReady() {
+      //player1
       player1 = new YT.Player('video1', {
         events: {
-          'onReady': function () {
-              console.log('I am ready');
-          }
-        }
-      });
-      onPlayerReady1();
-    }
+          'onReady': onPlayerReady1
+         }
+       });
+      //player2
+      player2 = new YT.Player('video2', {
+        events: {
+          'onReady': onPlayerReady2
+         }
+       });
+      //player3
+      player3 = new YT.Player('video3', {
+        events: {
+          'onReady': onPlayerReady3
+         }
+       });
+      //player4
+      player4 = new YT.Player('video4', {
+        events: {
+          'onReady': onPlayerReady4
+         }
+       });
+     }
+
+     //Stop all videos
+     function stopVideos() {
+       console.log("Stop videos 1 ", player1, " 2 ", player2, " 3 ", player3, " 4 ", player4)
+       player1.stopVideo();
+       player2.stopVideo(); 
+       player3.stopVideo(); 
+       player4.stopVideo(); 
+     }
+
 
     // Player Ready
     function onPlayerReady1(event) {
       play1.addEventListener( 'click', function() {
         card1.classList.add( 'video-is-open' );
         setTimeout(function() {
+          stopVideos();
           video1.style.display = 'block';
           player1.playVideo();
         }, 500);
@@ -183,6 +210,7 @@
       play2.addEventListener( 'click', function() {
         card2.classList.add( 'video-is-open' );
         setTimeout(function() {
+          stopVideos();
           video2.style.display = 'block';
           player2.playVideo();
         }, 500);
@@ -193,6 +221,7 @@
       play3.addEventListener( 'click', function() {
         card3.classList.add( 'video-is-open' );
         setTimeout(function() {
+          stopVideos();
           video3.style.display = 'block';
           player3.playVideo();
         }, 500);
@@ -203,6 +232,7 @@
       play4.addEventListener( 'click', function() {
         card4.classList.add( 'video-is-open' );
         setTimeout(function() {
+          stopVideos();
           video4.style.display = 'block';
           player4.playVideo();
         }, 500);
