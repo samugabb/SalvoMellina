@@ -41,10 +41,10 @@
       <div class="col-md-8 col-sm-12">
         <div id="carousel" class="carousel slide carousel-fade" data-interval="false">
           <ol class="carousel-indicators">
-            <li data-target="#carousel" data-slide-to="0" class="active">ADVERTISEMENTS</li>
-            <li data-target="#carousel" data-slide-to="1">MUSIC VIDEO</li>
-            <li data-target="#carousel" data-slide-to="2">WEDDINGS</li>
-            <li data-target="#carousel" data-slide-to="3">INSTAGRAM VIDEOS</li>
+            <li id="selector1" data-target="#carousel" data-slide-to="0" class="active">ADVERTISEMENTS</li>
+            <li id="selector2" data-target="#carousel" data-slide-to="1">MUSIC VIDEO</li>
+            <li id="selector3" data-target="#carousel" data-slide-to="2">WEDDINGS</li>
+            <li id="selector4" data-target="#carousel" data-slide-to="3">INSTAGRAM VIDEOS</li>
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
@@ -118,6 +118,11 @@
       play3  = document.querySelector( '.card-play3' ),
       play4  = document.querySelector( '.card-play4' ),
 
+      selector1 = document.querySelector( '.selector1' ),
+      selector2 = document.querySelector( '.selector2' ),
+      selector3 = document.querySelector( '.selector3' ),
+      selector4 = document.querySelector( '.selector4' ),
+
       video1 = document.querySelector( '.card-video1' ),
       video2 = document.querySelector( '.card-video2' ),
       video3 = document.querySelector( '.card-video3' ),
@@ -188,9 +193,9 @@
      function stopVideos() {
        console.log("Stop videos 1 ", player1, " 2 ", player2, " 3 ", player3, " 4 ", player4)
        player1.stopVideo();
-       player2.stopVideo(); 
-       player3.stopVideo(); 
-       player4.stopVideo(); 
+       player2.stopVideo();
+       player3.stopVideo();
+       player4.stopVideo();
      }
 
 
@@ -204,6 +209,11 @@
           player1.playVideo();
         }, 500);
       });
+      selector1.addEventListener( 'click', function() {
+        setTimeout(function() {
+          stopVideos();
+        }, 500);
+      });
     }
 
     function onPlayerReady2(event) {
@@ -213,6 +223,11 @@
           stopVideos();
           video2.style.display = 'block';
           player2.playVideo();
+        }, 500);
+      });
+      selector2.addEventListener( 'click', function() {
+        setTimeout(function() {
+          stopVideos();
         }, 500);
       });
     }
@@ -226,6 +241,11 @@
           player3.playVideo();
         }, 500);
       });
+      selector3.addEventListener( 'click', function() {
+        setTimeout(function() {
+          stopVideos();
+        }, 500);
+      });
     }
 
     function onPlayerReady4(event) {
@@ -235,6 +255,11 @@
           stopVideos();
           video4.style.display = 'block';
           player4.playVideo();
+        }, 500);
+      });
+      selector4.addEventListener( 'click', function() {
+        setTimeout(function() {
+          stopVideos();
         }, 500);
       });
     }
