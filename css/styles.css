@@ -183,19 +183,19 @@ strong {
 }
 
 .card1 {
-  background: url(../images/Card1.jpg) center center/cover;
+  background: url(../images/thumb1.jpg) center center/cover;
 }
 
 .card2 {
-  background: url(../images/Card2.jpg) center center/cover;
+  background: url(../images/thumb2.jpg) center center/cover;
 }
 
 .card3 {
-  background: url(../images/Card3.jpg) center center/cover;
+  background: url(../images/thumb3.jpg) center center/cover;
 }
 
 .card4 {
-  background: url(../images/Card4.jpg) center center/cover;
+  background: url(../images/thumb4.jpg) center center/cover;
 }
 
 .card-play {
